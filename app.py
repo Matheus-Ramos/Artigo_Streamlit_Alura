@@ -18,7 +18,7 @@ def plot_estoque(dataframe, categoria):
     dados_plot = dataframe.query('Categoria == @categoria')
 
     fig, ax = plt.subplots(figsize=(8,6))
-    ax = sns.barplot(x = 'Produto', y = 'Quantidade', data = dados_plot)
+    ax = sns.barplot(x = 'Produto', y = 'Quantidade', data = dados_plot, color = 'seagreen')
     ax.set_title(f'Quantidade em estoque dos produtos de {categoria}', fontsize = 16)
     ax.set_xlabel('Produtos', fontsize = 12)
     ax.tick_params(rotation = 20, axis = 'x')
